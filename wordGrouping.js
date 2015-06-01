@@ -26,3 +26,25 @@ var mixedOps = function(string){
 };
 
 console.log(mixedOps("1*2*10+12*20*22"));
+
+var subtraction = function(string) {
+  return string.split('-').reduce(function(total, num) {
+    return total - num;
+  });
+};
+
+console.log(subtraction('100-12-20'));
+
+var division = function(string) {
+  return string.split('/').reduce(function(total, num) {
+    return total/num;
+  });
+};
+
+console.log(division('100/20'));
+
+var iAmTheShit = function(string) {
+  return subtraction(string.split('-').map(division).join('-'));
+};
+
+console.log(iAmTheShit('100/2-9/3-10/2'));
